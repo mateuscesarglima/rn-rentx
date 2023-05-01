@@ -1,13 +1,13 @@
 import React from 'react';
 import { Text } from 'react-native';
-import {
-   Container
-} from './styles';
+import { Container } from './styles';
 
-export const Home = () => {
+const Home = () => {
   return (
-   <Container>
+    <Container>
       <Text>Testando</Text>
-   </Container>
+    </Container>
   );
-}
+};
+
+export default Home;

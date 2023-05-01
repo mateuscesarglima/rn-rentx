@@ -2,11 +2,12 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./src",
+    "allowSyntheticDefaultImports": true,
     "paths": {
+      "@Components/*": ["./components/*"],
       "@Screens/*": ["./screens/*"],
       "@Assets/*": ["./assets/*"],
-      "@Components/*": ["./components/*"],
-      "@Contenxt/*": ["./contenxt/*"],
+      "@Context/*": ["./context/*"],
       "@Hooks/*": ["./hooks/*"],
       "@Routes/*": ["./routes/*"],
       "@Services/*": ["./services/*"]
