@@ -10,7 +10,8 @@
       "@Context/*": ["./context/*"],
       "@Hooks/*": ["./hooks/*"],
       "@Routes/*": ["./routes/*"],
-      "@Services/*": ["./services/*"]
+      "@Services/*": ["./services/*"],
+      "@Styles/*": ["./styles/*"]
     }
   },
   "extends": "expo/tsconfig.base"

@@ -14,6 +14,7 @@ module.exports = function (api) {
             '@Hooks': './src/hooks',
             '@Routes': './src/routes',
             '@Services': './src/services',
+            '@Styles': './src/styles',
           },
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },
