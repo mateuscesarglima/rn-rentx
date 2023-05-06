@@ -11,7 +11,8 @@
       "@Hooks/*": ["./hooks/*"],
       "@Routes/*": ["./routes/*"],
       "@Services/*": ["./services/*"],
-      "@Styles/*": ["./styles/*"]
+      "@Styles/*": ["./styles/*"],
+      "@Constants/*": ["./constants/*"]
     }
   },
   "extends": "expo/tsconfig.base"

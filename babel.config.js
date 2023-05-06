@@ -15,6 +15,7 @@ module.exports = function (api) {
             '@Routes': './src/routes',
             '@Services': './src/services',
             '@Styles': './src/styles',
+            '@Constants': './src/constants',
           },
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
         },

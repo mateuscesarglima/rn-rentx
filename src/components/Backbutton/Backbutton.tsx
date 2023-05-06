@@ -1,7 +1,7 @@
-import React from 'react';
-import { Container } from './styles';
 import { MaterialIcons } from '@expo/vector-icons';
+import React from 'react';
 import { useTheme } from 'styled-components/native';
+import { Container } from './styles';
 
 import { TouchableOpacityProps } from 'react-native';
 
@@ -15,7 +15,7 @@ export const Backbutton = ({ color, ...rest }: BackButtonProps) => {
     <Container {...rest}>
       <MaterialIcons
         name="chevron-left"
-        size={24}
+        size={30}
         color={color ? color : theme.colors.text}
       />
     </Container>

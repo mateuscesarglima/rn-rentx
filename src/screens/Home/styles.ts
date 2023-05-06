@@ -1,5 +1,16 @@
 import styled from 'styled-components/native';
-import { FlatList, StatusBar } from 'react-native';
+import { FlatList, FlatListProps, StatusBar } from 'react-native';
+
+export interface CarData {
+  brand: string;
+  name: string;
+  rent: {
+    period: string;
+    price: number;
+  };
+  thumbnail: string;
+  type: string;
+}
 
 export const Container = styled.View`
   flex: 1;
@@ -12,7 +23,9 @@ export const Title = styled.Text`
   font-size: 30px;
 `;
 
-export const CarList = styled(FlatList).attrs({
+export const CarList = styled(
+  FlatList as new (props: FlatListProps<CarData>) => FlatList<CarData>
+).attrs({
   contentContainerStyle: {
     padding: 24,
   },

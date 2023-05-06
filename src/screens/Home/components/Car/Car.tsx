@@ -16,6 +16,7 @@ import {
 
 import EnergySvg from '@Assets/energy.svg';
 import { useTheme } from 'styled-components/native';
+import { RectButtonProps } from 'react-native-gesture-handler';
 
 interface CarData {
   brand: string;
@@ -28,15 +29,14 @@ interface CarData {
   type: string;
 }
 
-interface CarProps {
+interface CarProps extends RectButtonProps {
   data: CarData;
 }
 
-export const Car = ({ data }: CarProps) => {
-  const theme = useTheme();
+export const Car = ({ data, ...rest }: CarProps) => {
   const { brand, name, rent, thumbnail, type } = data;
   return (
-    <Container>
+    <Container {...rest}>
       <Details>
         <CarInfo>
           <Brand>{brand}</Brand>

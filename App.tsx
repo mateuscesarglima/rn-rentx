@@ -1,5 +1,4 @@
-import { CarDetails } from '@Screens/CarDetails';
-import { Home } from '@Screens/Home';
+import { Routes } from '@Routes/index';
 import themes from '@Styles/theme';
 import {
   Archivo_400Regular,
@@ -14,6 +13,7 @@ import {
 import * as SplashScreen from 'expo-splash-screen';
 import React, { useCallback, useEffect } from 'react';
 import { View } from 'react-native';
+import 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components/native';
 
 export default function App() {
@@ -45,8 +45,7 @@ export default function App() {
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
       <ThemeProvider theme={themes}>
-        <CarDetails />
-        {/* <Home /> */}
+        <Routes />
       </ThemeProvider>
     </View>
   );

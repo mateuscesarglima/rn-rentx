@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Header } from '@Screens/Home/components/Header';
-import { CarList, Container, Title } from './styles';
+import { CarData, CarList, Container, Title } from './styles';
 import { Car } from './components/Car';
+import { useNavigation } from '@react-navigation/native';
+import { routeCodes } from '@Constants/routes';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const Home = () => {
-  const carData = [
+  const navigation = useNavigation<NativeStackNavigationProp<any>>();
+
+  const carData: CarData[] = [
     {
       brand: 'Audi',
       name: 'RS 5 Coupé',
@@ -29,13 +34,19 @@ const Home = () => {
     },
   ];
 
+  const handleCarDetails = () => {
+    navigation.navigate(routeCodes.CAR_DETAILS);
+  };
+
   return (
     <Container>
       <Header />
       <CarList
         data={carData}
-        keyExtractor={({ item }) => String(item)}
-        renderItem={({ item }) => <Car data={item} />}
+        keyExtractor={(item) => item.name}
+        renderItem={({ item }) => (
+          <Car data={item} onPress={handleCarDetails} />
+        )}
       />
     </Container>
   );

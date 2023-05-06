@@ -10,7 +10,7 @@ interface ButtonProps {
 
 export const Button = ({ title, onPress, color }: ButtonProps) => {
   return (
-    <Container onPress={onPress} color={color}>
+    <Container onPress={onPress} color={color} activeOpacity={0.5}>
       <Title>{title}</Title>
     </Container>
   );
